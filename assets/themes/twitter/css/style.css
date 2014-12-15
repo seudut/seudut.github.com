@@ -68,4 +68,5 @@ body {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-	
+
+.container .nav{ float:right; margin-right:15px; } }
