@@ -69,4 +69,9 @@ body {
 	color:#FFF;
 }
 
+body, p{
+	font-family: 'Lucida Grande','Lucida Sans Unicode','Microsoft YaHei','Helvetica Neue',Verdana,serif;
+	font-size: 12px;
+	line-height: 1.8em;
+}
 .container .nav{ float:right; margin-right:15px; } }
