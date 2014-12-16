@@ -74,4 +74,12 @@ body, p{
 	font-size: 12px;
 	line-height: 1.8em;
 }
-.container .nav{ float:right; margin-right:15px; } }
+.container .nav{ float:right; margin-right:15px; }
+code{background-color:#F5F5F5;}
+pre code{background-color:transparent;}
+/*
+.page-header h2 {
+    font-size: 18px;
+    line-height: 24px;
+}*/
+.span10{width:98%;}
