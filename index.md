@@ -12,11 +12,11 @@ tagline: Supporting tagline
     <div class="post row">
         <h3><a class="title" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
         <div>
-          <cite style="font-size:11px">{{ post.date | date: "%Y-%m-%d" }}</cite> <i class="icon-tag"></i>  {% for tag in post.tags %}<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" style="font-size:11px">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
+          <cite style="font-size:11px; margin-left:10px; margin-right:10px; color:gray">{{ post.date | date: "Date: %b %d, %Y" }}</cite> <cite style="font-size:11px; margin-left:10px;color:gray">Tag:</cite><i class="icon-tag"></i>  {% for tag in post.tags %}<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" style="font-size:11px">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
        </div> 
         <div class="post_at_index">
             {{post.excerpt}} 
-        {% if post.excerpt != post.content %}<a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow" style="float:right; font-size:11px; margin-right:40px;">Read more...</a>{% endif %}
+        {% if post.excerpt != post.content %}<a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow" style="float:right; font-size:11px; margin-right:40px; font-style:italic">Read more...</a>{% endif %}
         </div>
         <div style="clear: both;"></div>
         <hr/>
