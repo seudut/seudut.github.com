@@ -7,7 +7,7 @@ tagline: Supporting tagline
 <div class="row-fluid" style="padding-top:40px; padding-left:20px; padding-right:20px">
     <div class="posts" display="none"></div> 
         <hr/>
-  {% for post in site.posts limit:150 %}
+  {% for post in site.posts limit:5 %}
         {% capture summary %}{{post.content | split:'<!--more-->' |first }}{% endcapture%}
     <div class="post row">
         <h3><a class="title" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
