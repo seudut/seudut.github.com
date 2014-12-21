@@ -7,7 +7,7 @@
 
 <cite style="font-size:11px; margin-left:10px; color:gray">Tags:</cite><i class="icon-tag"></i>  {% for tag in page.tags %}<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" style="font-size:11px">{{ tag }}</a>{% if forloop.last %}{% else %}<cite style="font-size:11px; color:gray">,</cite> {% endif %}{% endfor %}
 
-    <cite style="font-size:11px; margin-right:20px; margin-left:20px">
+    <cite style="font-size:11px; margin-right:20px; margin-left:20px; color:gray">
 Date: <span>{{ page.date | date: "%b %d, %Y"}}</span></cite>
   </div>
 <!--
