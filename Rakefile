@@ -4,6 +4,8 @@ require 'yaml'
 require 'time'
 
 SOURCE = "."
+EDITOR = "vim"
+
 CONFIG = {
   'version' => "0.3.0",
   'themes' => File.join(SOURCE, "_includes", "themes"),
@@ -69,8 +71,9 @@ task :post do
     post.puts "category: #{category}"
     post.puts "tags: #{tags}"
     post.puts "---"
-    post.puts "{% include JB/setup %}"
+#    post.puts "{% include JB/setup %}"
   end
+  exec "#{EDITOR} + #{filename}"
 end # task :post
 
 # Usage: rake page name="about.html"
@@ -96,6 +99,7 @@ task :page do
     post.puts "---"
     post.puts "{% include JB/setup %}"
   end
+  exec "#{EDITOR} + #{filename}"
 end # task :page
 
 desc "Launch preview environment"
