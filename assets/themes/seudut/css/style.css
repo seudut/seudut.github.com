@@ -37,6 +37,9 @@ body {
 .topbar .btn {
   border: 0;
 }
+.topbar a{
+	color: #999;
+}
 
 
 /* tag_box ======================================================== */
@@ -73,7 +76,7 @@ body {
 
 body, p{
 	font-family: 'Lucida Grande','Lucida Sans Unicode','Microsoft YaHei','Helvetica Neue',Verdana,serif;
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 1.8em;
 }
 .container .nav{ float:right; margin-right:15px; }
