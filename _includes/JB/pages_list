@@ -38,10 +38,9 @@ Usage:
 
   {% if page.url == "/about.html" %}
 	<li class="active"><a href="{{ BASE_PATH }}{{page.url}}" class="active">About</a></li>
-		{% else %}
-			<li><a href="{{ BASE_PATH }}/about.html">About</a></li>
-			{% endif %}
-			}}"}}"
+  {% else %}
+	<li><a href="{{ BASE_PATH }}/about.html">About</a></li>
+  {% endif %}
 {% endif %}
 {% assign pages_list = nil %}
 {% assign group = nil %}
