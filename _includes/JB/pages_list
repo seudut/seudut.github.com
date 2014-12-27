@@ -24,16 +24,24 @@ Usage:
   {% include custom/pages_list %}
 {% else %}
   {% for node in pages_list %}
-    {% if node.title != null %}
+    {% if node.title != null and node.title != "Welcome" and node.title != "Archives" and node.title != "About" %}
       {% if group == null or group == node.group %}
       	{% if page.url == node.url %}
       	<li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+
       	{% else %}
       	<li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
       	{% endif %}
       {% endif %}
     {% endif %}
   {% endfor %}
+
+  {% if page.url == "/about.html" %}
+	<li class="active"><a href="{{ BASE_PATH }}{{page.url}}" class="active">About</a></li>
+		{% else %}
+			<li><a href="{{ BASE_PATH }}/about.html">About</a></li>
+			{% endif %}
+			}}"}}"
 {% endif %}
 {% assign pages_list = nil %}
 {% assign group = nil %}
