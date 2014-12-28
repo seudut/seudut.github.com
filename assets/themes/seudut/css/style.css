@@ -89,3 +89,8 @@ pre code{background-color:transparent;}
 }*/
 .span10{width:820px;}
 .row{ margin-left: 0px }
+
+blockquote p{
+	font-style: italic;
+	font-size: 12px;
+}
