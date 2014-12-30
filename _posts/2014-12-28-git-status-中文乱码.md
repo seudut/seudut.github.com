@@ -3,14 +3,14 @@ layout: post
 title: "git status 中文乱码"
 description: ""
 category: 
-tags: []
+tags: [git]
 ---
 
     $ git config --global core.quotepath false
 
 refer [here](http://blog.crhan.com/2012/09/git-status-中文乱码解决/)
 
-man *git-config*
+man git-config
 
 > *core.quotepath*<br />
 >
