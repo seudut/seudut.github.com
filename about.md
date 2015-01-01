@@ -6,21 +6,15 @@ description: ""
 ---
 {% include JB/setup %}
 
-github
+Hello, this is my person blog. My [github](https://github.com/seudut)
 
-<https://github.com/seudut>
 
-### 书单
 
-一个星期看一本书，一年54本书。
+KISS principle
 
-1. C++ primary
-2. Effective C++
-3. 算法导论
-4. C++ 多线程
+Keep it simple, stupid
 
-### Project
+Effectiveness Is All About Managing Your Time, Energy, and Attention 
 
-1. iOS, 数学图形，运动
-
+简单，极致
 
