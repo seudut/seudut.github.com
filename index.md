@@ -1,25 +1,27 @@
 ---
 layout: index 
-title: Hello World!
-tagline: Supporting tagline
+title: Welcome
+tagline: 
 ---
+
 {% include JB/setup %}
-<div class="row-fluid" style="padding-top:40px; padding-left:20px; padding-right:20px">
-    <div class="posts" display="none"></div> 
-        <hr/>
-  {% for post in site.posts limit:5 %}
-        {% capture summary %}{{post.content | split:'<!--more-->' |first }}{% endcapture%}
-    <div class="post row">
-        <h3><a class="title" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-        <div>
-          <cite style="font-size:11px; margin-left:10px; margin-right:10px; color:gray">{{ post.date | date: "Date: %b %d, %Y" }}</cite> <cite style="font-size:11px; margin-left:10px;color:gray">Tags:</cite><i class="icon-tag"></i>  {% for tag in post.tags %}<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" style="font-size:11px">{{ tag }}</a>{% if forloop.last %}{% else %}<cite style="font-size:11px; color:gray">,</cite> {% endif %}{% endfor %}
-       </div> 
-        <div class="post_at_index" style="margin-top:9px">
-            {{post.excerpt}} 
-        {% if post.excerpt != post.content %}<a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow" style="float:right; font-size:11px; margin-right:40px; font-style:italic">Read more...</a>{% endif %}
-        </div>
-        <div style="clear: both;"></div>
-        <hr/>
-    </div> 
- {% endfor %}
+
+这里是Payne的个人博客，用来记录工作，学习以及生活中的点点滴滴。
+
+<hr>
+<h4>Recent Articles</h4>
+{% assign posts_collate = site.posts %}
+<div id="home-article">
+{% if site.JB.posts_collate.provider == "custom" %}
+  {% include custom/posts_collate %}
+{% else %}
+  {% for post in posts_collate  %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture this_month %}{{ post.date | date: "%m" }}{% endcapture %}
+    <li><p><span>{{ post.date | date: "%m/%e/%Y" }}</span> - <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></p></li>
+  
+  {% endfor %}
+{% endif %}
+{% assign posts_collate = nil %}
 </div>
+
