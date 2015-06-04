@@ -34,3 +34,6 @@ tags: []
 
 * el-get
 
+* remap Enter using KeyMap on Mac
+  if click Enter alone, send enter,
+  else Enter + A  send Ctrl+A
